@@ -1,0 +1,19 @@
+elasticsearch:
+  image: elasticsearch
+  volumes:
+    - elk-data:/usr/share/elasticsearch/data
+logstash:
+  image: logstash
+  links:
+    - elasticsearch
+  ports:
+    - "1234:1234"
+  volumes:
+    - ./:/logstash/etc
+  command: "-f /logstash/etc/simplejson.conf"
+kibana:
+  image: kibana
+  links:
+    - elasticsearch
+  ports:
+    - "5601:5601"

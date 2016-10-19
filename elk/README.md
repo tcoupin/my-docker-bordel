@@ -1,3 +1,3 @@
 ## ELK
 
-Mise en place d'une stack Elasticsearch/Fluentd/Kibana
+Mise en place d'une stack Elasticsearch/Logstash/Kibana
