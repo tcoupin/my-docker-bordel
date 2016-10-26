@@ -10,7 +10,7 @@ logstash:
     - "1234:1234"
   volumes:
     - ./:/logstash/etc
-  command: "-f /logstash/etc/simplejson.conf"
+  command: "-f /logstash/etc/completion.conf"
 kibana:
   image: kibana
   links:
